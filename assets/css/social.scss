@@ -1,0 +1,238 @@
+//variables
+$basic-light-color: #fff;
+$fb-color: #3b5998;
+$tw-color: #00aced;
+$g-plus: #dd4b39;
+$dribbble: #ea4c89;
+$pinterest: #cb2027;
+$insta: #bc2a8d;
+$in: #007bb6;
+$vimeo: #1ab7ea;
+$border-radius: 10px;
+$font-size: 25px;
+
+/*common styles !!!YOU DON'T NEED THEM */
+.container {
+    margin: 60px auto 0px auto;
+    text-align: center;
+
+    h1 {
+        font: {
+            family: 'Roboto', sans-serif;
+            weight: 900;
+            size: 30px;
+        }
+
+        text-transform: uppercase;
+        color: $basic-dark-color;
+        letter-spacing: 3px;
+
+        span {
+            display: inline-block;
+
+            &:before,
+            &:after {
+                content: "";
+                display: block;
+                width: 34px;
+                height: 2px;
+                background-color: $basic-dark-color;
+                margin: 0px 0px 0px 2px;
+            }
+        }
+    }
+}
+
+.effect {
+    width: 100%;
+    padding: 50px 0px 70px 0px;
+    background-color: $basic-dark-color;
+
+    h2 {
+        color: $basic-light-color;
+
+        font: {
+            family: 'Playfair Display', serif;
+            weight: 400;
+            size: 25px;
+        }
+
+        letter-spacing: 3px;
+    }
+
+    &:nth-child(2) {
+        margin-top: 50px;
+    }
+
+    &:nth-child(2n+1) {
+        background-color: $basic-light-color;
+
+        h2 {
+            color: $basic-dark-color;
+        }
+    }
+
+    .buttons {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+    }
+
+    a {
+
+        &:last-child {
+            margin-right: 0px;
+        }
+    }
+}
+
+/*common link styles !!!YOU NEED THEM*/
+.effect {
+    /*display: flex; !!!uncomment this line !!!*/
+
+    a {
+        text-decoration: none !important;
+        color: $basic-light-color;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $border-radius;
+        margin-right: 20px;
+        font-size: $font-size;
+        overflow: hidden;
+        position: relative;
+
+        i {
+            position: relative;
+            z-index: 3;
+        }
+
+        &.fb {
+            background-color: $fb-color;
+        }
+
+        &.tw {
+            background-color: $tw-color;
+        }
+
+        &.g-plus {
+            background-color: $g-plus;
+        }
+
+        &.dribbble {
+            background-color: $dribbble;
+        }
+
+        &.pinterest {
+            background-color: $pinterest;
+        }
+
+        &.insta {
+            background-color: $insta;
+        }
+
+        &.in {
+            background-color: $in;
+        }
+
+        &.vimeo {
+            background-color: $vimeo;
+        }
+    }
+}
+
+/* aeneas effect */
+
+.effect.aeneas {
+
+    a {
+        transition: transform 0.4s linear 0s, border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+
+        i {
+            transition: transform 0.4s linear 0s;
+        }
+
+        &:hover {
+            transform: rotate(360deg);
+            border-radius: 50%;
+
+            i {
+                transform: rotate(-360deg);
+            }
+        }
+    }
+}
+
+/* jaques effect */
+.effect.jaques {
+
+    a {
+        transition: border-top-left-radius 0.1s linear 0s, border-top-right-radius 0.1s linear 0.1s, border-bottom-right-radius 0.1s linear 0.2s, border-bottom-left-radius 0.1s linear 0.3s;
+
+        &:hover {
+            border-radius: 50%;
+        }
+    }
+}
+
+/* egeon effect */
+.effect.egeon {
+
+    a {
+        transition: transform 0.2s linear 0s, border-radius 0.2s linear 0.2s;
+
+        i {
+            transition: transform 0.2s linear 0s;
+        }
+
+        &:hover {
+            transform: rotate(-90deg);
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+
+            i {
+                transform: rotate(90deg);
+            }
+        }
+    }
+}
+
+/* claudio effect */
+
+.effect.claudio {
+
+    a {
+        transition: transform 0.2s linear 0s, border-radius 0.2s linear 0s;
+
+        &:hover {
+            transform: scale(1.2);
+            border-bottom-left-radius: 50%;
+            border-top-right-radius: 50%;
+        }
+    }
+}
+
+/* laertes effect */
+
+.effect.laertes {
+
+    a {
+        transition: all 0.2s linear 0s;
+
+        i {
+            transition: all 0.2s linear 0s;
+        }
+
+        &:hover {
+            border-radius: 50%/20%;
+
+            i {
+                transform: scale(1.1);
+                text-shadow: 0 0 12px rgba($basic-dark-color, 0.6);
+            }
+        }
+    }
+}
