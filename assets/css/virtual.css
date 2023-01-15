@@ -564,20 +564,6 @@ a:hover, a:active {
 /*
  *  8. Navigation 
  */
-.sticky {
-    top: 0;
-    z-index: 999;
-}
-
-.navbar-brand {
-    font-weight: 500;
-    padding-top: 12px;
-    padding-bottom: 12px;
-}
-
-.navbar-nav .nav-link {
-    padding: 14px 10px;
-}
 
 @media (min-width: 576px) {
     .navbar-expand-sm .navbar-nav .nav-link {

@@ -4253,10 +4253,12 @@ input[type="button"].btn-block {
 .nav-link {
   display: block;
   padding: 0.5rem 1rem;
+
 }
 
 .nav-link:hover, .nav-link:focus {
   text-decoration: none;
+
 }
 
 .nav-link.disabled {
@@ -4398,15 +4400,15 @@ input[type="button"].btn-block {
   display: inline-block;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+  text-align: left;
 }
-
 .navbar-collapse {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
   -ms-flex-positive: 1;
   flex-grow: 1;
   -ms-flex-align: center;
-  align-items: center;
+    align-items: center;
 }
 
 .navbar-toggler {
@@ -4416,6 +4418,7 @@ input[type="button"].btn-block {
   background-color: transparent;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+
 }
 
 .navbar-toggler:hover, .navbar-toggler:focus {
@@ -4426,12 +4429,23 @@ input[type="button"].btn-block {
   display: inline-block;
   width: 1.5em;
   height: 1.5em;
+  cursor: pointer;
   vertical-align: middle;
   content: "";
   background: no-repeat center center;
   background-size: 100% 100%;
 }
-
+@media screen and (max-width: 667px) {
+  .navbar-toggle {
+    display: block;
+  }
+  .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 550px;
+    ;
+  }
+}
 @media (max-width: 575.98px) {
   .navbar-expand-sm > .container,
   .navbar-expand-sm > .container-fluid, .navbar-expand-sm > .container-sm, .navbar-expand-sm > .container-md, .navbar-expand-sm > .container-lg, .navbar-expand-sm > .container-xl {
